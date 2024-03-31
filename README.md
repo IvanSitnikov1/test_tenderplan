@@ -2,7 +2,7 @@
 pip install -r requirements.txt
 
 #### Тестирование работы задач
-pytest
+python -m unittest
 
 #### Для проверки выполнения основной части тестового задания запустить main.py
 python main.py

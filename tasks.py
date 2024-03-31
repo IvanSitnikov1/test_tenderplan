@@ -4,13 +4,18 @@ from bs4 import BeautifulSoup
 import requests
 
 
-app = Celery('myapp', backend='redis://localhost:6379', broker='redis://localhost:6379')
+app = Celery(
+    'myapp',
+    backend='redis://localhost:6379',
+    broker='redis://localhost:6379',
+)
 app.conf.update(
-    CELERY_ALWAYS_EAGER=True
+    CELERY_ALWAYS_EAGER=True,
 )
 
 headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.129 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb' \
+        'Kit/537.36 (KHTML, like Gecko) Chrome/122.0.6261.129 Safari/537.36',
     }
 
 
